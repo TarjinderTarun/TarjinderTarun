@@ -1,5 +1,9 @@
 <!-- Profile README for Tarjinder Tarun -->
 
+<p align="center">
+  <img src="https://your-profile-image-url.jpg" width="150" height="150" style="border-radius:50%;" alt="Tarjinder Tarun"/>
+</p>
+
 <h1 align="center">👋 Hi, I'm Tarjinder Tarun</h1>
 <h3 align="center">🚀 Robotics, Electronics & IoT Innovator | Founder of Mobotics</h3>
 
@@ -7,6 +11,16 @@
   <img src="https://img.shields.io/badge/Experience-26%20Years-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Focus-Robotics%20%26%20Electronics-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Location-Punjab%2C%20India-orange?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/tarjindertarun"><img src="https://img.icons8.com/fluent/64/000000/github.png"/></a>
+  <a href="https://www.linkedin.com/in/tarjinder-tarun"><img src="https://img.icons8.com/fluent/64/000000/linkedin.png"/></a>
+  <a href="https://twitter.com/"><img src="https://img.icons8.com/fluent/64/000000/twitter.png"/></a>
+  <a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluent/64/000000/facebook.png"/></a>
+  <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluent/64/000000/instagram-new.png"/></a>
+  <a href="mailto:tarjindert@gmail.com"><img src="https://img.icons8.com/fluent/64/000000/gmail.png"/></a>
+  <a href="https://wa.me/919988226597?text=Hi"><img src="https://img.icons8.com/color/64/000000/whatsapp.png"/></a>
 </p>
 
 ---
@@ -38,8 +52,6 @@ I am **Tarjinder Tarun**, a passionate **Robotics & Electronics Developer** with
 ### 📅 Projects Showcase  
 
 Here are **200+ projects** organized by year. Click each year to expand.  
-
----
 
 <details>
 <summary>🔹 2024 Projects (100+)</summary>
@@ -124,11 +136,9 @@ Here are **200+ projects** organized by year. Click each year to expand.
 69. Sound-Activated Switch Circuit  
 70. Digital Clock with TM1638  
 
-➡️ *(...list continues till 100 for 2024)*  
+➡️ *(list continues till 100 for 2024)*  
 
 </details>
-
----
 
 <details>
 <summary>🔹 2025 Projects (100+)</summary>
@@ -193,13 +203,13 @@ Here are **200+ projects** organized by year. Click each year to expand.
 189. Smart Fan Speed IoT Edition  
 190. IoT Thermometer with Cloud  
 
-➡️ *(...list continues till 200 for 2025)*  
+➡️ *(list continues till 200 for 2025)*  
 
 </details>
 
 ---
 
-### 🌍 Mobotics and Mobotics Welfare Foundation NGO  
+### 🌍 Mobotics NGO  
 
 📌 **Mobotics** (Founded 2006) – An **R&D company and NGO** dedicated to:  
 - 🎓 Training students in Robotics, IoT, and Electronics  
@@ -207,21 +217,20 @@ Here are **200+ projects** organized by year. Click each year to expand.
 - 🛠️ Offering 3D Printing, Laser Cutting & Prototyping services  
 - 🌱 Promoting **STEM education** through workshops and certifications  
 
-📍 Address: **Shop No. 3, Law Gate Road View Estate, Village Maheru, Punjab Nagar, Jalandhar - 144410**  
-📧 Email: **tarjindert@gmail.com**
+📧 Email: **tarjindert@gmail.com**  
 
 ---
 
 ### 🌐 Connect with Me  
 
 <p align="center">
-  <a href="https://github.com/tarjindertarun"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a>
-  <a href="https://www.linkedin.com/in/tarjinder-tarun"><img src="https://img.icons8.com/fluent/48/000000/linkedin.png"/></a>
-  <a href="https://twitter.com/"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
-  <a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluent/48/000000/facebook.png"/></a>
-  <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
-  <a href="mailto:tarjindert@gmail.com"><img src="https://img.icons8.com/fluent/48/000000/gmail.png"/></a>
-  <a href="https://wa.me/919988226597?text=Hi"><img src="https://img.icons8.com/color/48/000000/whatsapp.png"/></a>
+  <a href="https://github.com/tarjindertarun"><img src="https://img.icons8.com/fluent/64/000000/github.png"/></a>
+  <a href="https://www.linkedin.com/in/tarjinder-tarun"><img src="https://img.icons8.com/fluent/64/000000/linkedin.png"/></a>
+  <a href="https://twitter.com/"><img src="https://img.icons8.com/fluent/64/000000/twitter.png"/></a>
+  <a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluent/64/000000/facebook.png"/></a>
+  <a href="https://www.instagram.com/"><img src="https://img.icons8.com/fluent/64/000000/instagram-new.png"/></a>
+  <a href="mailto:tarjindert@gmail.com"><img src="https://img.icons8.com/fluent/64/000000/gmail.png"/></a>
+  <a href="https://wa.me/919988226597?text=Hi"><img src="https://img.icons8.com/color/64/000000/whatsapp.png"/></a>
 </p>
 
 ---

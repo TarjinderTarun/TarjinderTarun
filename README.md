@@ -157,7 +157,7 @@ I have a deep passion for **advancing STEM education** and applying cutting-edge
   </tr>
 </table>
 
-<p><em>Click images to view project details. Replace placeholders with your actual project images (upload to your GitHub repo for best performance, e.g., /images/project1.jpg).</em></p>
+
 
 </div>
 

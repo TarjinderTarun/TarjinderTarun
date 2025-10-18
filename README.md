@@ -35,7 +35,7 @@
   <a href="https://github.com/tarjindertarun">
     <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub" style="margin: 0 10px; transition: transform 0.2s;" />
   </a>
-  <a href="https://www.linkedin.com/in/tarjinder-tarun">
+  <a href="https://www.linkedin.com/in/tarjindertarun">
     <img src="https://img.icons8.com/fluent/48/000000/linkedin.png" alt="LinkedIn" style="margin: 0 10px; transition: transform 0.2s;" />
   </a>
   <a href="https://twitter.com/">

@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjinder Tarun | Personal Portfolio, Research Hub & CMS Engine</title>
+    <!-- Dynamic AI Indexing & GEO Meta Tags -->
+    <meta name="keywords" id="meta-keywords" content="Tarjinder Tarun, Robotics Researcher, Embedded Systems, Optical Sensing, Smart Agriculture, Mobotics, Mobotics Welfare Foundation">
+    <meta name="description" id="meta-description" content="Personal Portfolio, Research Hub & CMS Platform of Tarjinder Tarun - Independent Researcher, Hardware Engineer & Founder of Mobotics and Mobotics Welfare Foundation.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a251c',      /* Deep Emerald Primary */
+                            emerald: '#113f30',   /* Deep Emerald Accent */
+                            action: '#10b981',    /* Interactive Emerald */
+                            hover: '#059669',     /* Hover Emerald */
+                            gold: '#d4af37',      /* Warm Gold Accent */
+                            goldlight: '#f3e5ab'  /* Light Gold Highlight */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; }
+        .heading-serif { font-family: 'Merriweather', serif; }
+        .glass-header { background: rgba(10, 37, 28, 0.96); backdrop-filter: blur(12px); }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .emerald-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(10, 37, 28, 0.04), 0 2px 4px -1px rgba(10, 37, 28, 0.02);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .emerald-card:hover {
+            border-color: #10b981;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px -3px rgba(10, 37, 28, 0.08);
+        }
+        .modal-backdrop { background: rgba(0, 0, 0, 0.82); backdrop-filter: blur(6px); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #113f30; border-radius: 4px; }
+    </style>
+
+    <!-- Placeholder Container for AdSense and GTM Dynamic Injection -->
+    <div id="gtm-script-container"></div>
+    <div id="adsense-script-container"></div>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-40 glass-header text-white border-b border-emerald-800/40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Avatar & Brand Header -->
+                <a href="#home" onclick="navTo('home')" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-brand-gold to-brand-goldlight text-brand-dark flex items-center justify-center font-bold text-lg shadow-md border-2 border-brand-gold">
+                        TT
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight block gold-gradient-text group-hover:opacity-90 transition" id="header-author-name">Tarjinder Tarun</span>
+                        <span class="text-xs text-emerald-300 block -mt-1 font-light">Researcher • Hardware Innovator • Tech Founder</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Bar (13 Sections) -->
+                <nav class="hidden xl:flex items-center space-x-1 text-xs font-semibold uppercase tracking-wider">
+                    <button onclick="navTo('home')" class="px-2 py-1 rounded hover:text-brand-gold transition">Home</button>
+                    <button onclick="navTo('about')" class="px-2 py-1 rounded hover:text-brand-gold transition">About</button>
+                    <button onclick="navTo('research')" class="px-2 py-1 rounded hover:text-brand-gold transition">Research</button>
+                    <button onclick="navTo('publications')" class="px-2 py-1 rounded hover:text-brand-gold transition">Publications</button>
+                    <button onclick="navTo('patents')" class="px-2 py-1 rounded hover:text-brand-gold transition">Patents</button>
+                    <button onclick="navTo('projects')" class="px-2 py-1 rounded hover:text-brand-gold transition">Projects</button>
+                    <button onclick="navTo('training')" class="px-2 py-1 rounded hover:text-brand-gold transition">Training</button>
+                    <button onclick="navTo('blog')" class="px-2 py-1 rounded hover:text-brand-gold transition">Blog</button>
+                    <button onclick="navTo('news')" class="px-2 py-1 rounded hover:text-brand-gold transition">News</button>
+                    <button onclick="navTo('mobotics')" class="px-2 py-1 rounded text-emerald-300 hover:text-brand-gold transition font-bold">Mobotics</button>
+                    <button onclick="navTo('foundation')" class="px-2 py-1 rounded text-amber-300 hover:text-brand-gold transition font-bold">MWF NGO</button>
+                    <button onclick="navTo('contact')" class="px-2 py-1 rounded hover:text-brand-gold transition">Contact</button>
+                    <button onclick="navTo('work-with-me')" class="ml-2 bg-brand-gold text-brand-dark px-3.5 py-1.5 rounded-full font-bold hover:bg-amber-400 transition shadow">Work With Me</button>
+                </nav>
+
+                <!-- Mobile Drawer Toggle Button -->
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-200 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-brand-dark border-b border-brand-emerald px-4 pt-2 pb-6 space-y-2 text-sm font-medium">
+            <button onclick="navTo('home')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Home</button>
+            <button onclick="navTo('about')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">About Tarjinder Tarun</button>
+            <button onclick="navTo('research')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Research Hub</button>
+            <button onclick="navTo('publications')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Publications</button>
+            <button onclick="navTo('patents')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Patents &amp; Innovations</button>
+            <button onclick="navTo('projects')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Projects</button>
+            <button onclick="navTo('training')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Training &amp; Workshops</button>
+            <button onclick="navTo('blog')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Blog Posts</button>
+            <button onclick="navTo('news')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">News &amp; Media</button>
+            <button onclick="navTo('mobotics')" class="block w-full text-left py-2 border-b border-gray-800 text-emerald-300 font-bold">Mobotics Commercial</button>
+            <button onclick="navTo('foundation')" class="block w-full text-left py-2 border-b border-gray-800 text-amber-300 font-bold">Mobotics Welfare Foundation</button>
+            <button onclick="navTo('contact')" class="block w-full text-left py-2 border-b border-gray-800 hover:text-brand-gold">Contact</button>
+            <button onclick="navTo('work-with-me')" class="block w-full text-center mt-3 bg-brand-gold text-brand-dark py-2.5 rounded-lg font-bold">Work With Me</button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SECTION 1: HERO SECTION -->
+        <section id="sec-home" class="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-brand-emerald/60 border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-300 tracking-wide uppercase">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>Embedded Systems • Optical Sensing • Edge AI • Smart AgTech</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight heading-serif leading-tight">
+                            Advancing Autonomous Electronics &amp; Edge Sensing Intelligence
+                        </h1>
+                        <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+                            Official portfolio &amp; research hub of <strong class="text-white">Tarjinder Tarun</strong>. Pushing boundaries in spectral soil analysis, low-power IoT gateways, commercial hardware prototyping, and accessible non-profit STEM education.
+                        </p>
+                        
+                        <div class="pt-4 flex flex-wrap gap-4">
+                            <button onclick="navTo('research')" class="bg-brand-gold text-brand-dark px-6 py-3 rounded-lg font-bold hover:bg-amber-400 transition shadow-lg flex items-center space-x-2">
+                                <span>Explore Research Hub</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                            <button onclick="navTo('mobotics')" class="border border-emerald-400 text-emerald-300 px-6 py-3 rounded-lg font-semibold hover:bg-brand-emerald/50 transition flex items-center space-x-2">
+                                <i class="fa-solid fa-cubes"></i>
+                                <span>Mobotics Commercial</span>
+                            </button>
+                            <button onclick="navTo('foundation')" class="border border-amber-400/50 text-amber-300 px-6 py-3 rounded-lg font-semibold hover:bg-amber-900/30 transition flex items-center space-x-2">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                <span>MWF NGO Outreach</span>
+                            </button>
+                        </div>
+
+                        <!-- Dynamic Academic Links Container -->
+                        <div class="pt-6 border-t border-emerald-900/60 flex flex-wrap items-center gap-4 text-sm text-gray-300">
+                            <span class="text-xs uppercase font-bold tracking-widest text-emerald-400">Academic Profiles:</span>
+                            <div id="dynamic-social-links-hero" class="flex flex-wrap gap-4">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-2xl p-2 bg-gradient-to-tr from-brand-gold via-emerald-500 to-emerald-900 shadow-2xl">
+                            <img id="profile-avatar-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Tarjinder Tarun" class="w-full h-full object-cover rounded-xl bg-brand-dark" onerror="handleImageError(this, 'Tarjinder Tarun Profile Avatar')">
+                            <div class="absolute -bottom-4 -right-4 bg-brand-dark border border-brand-gold px-4 py-2 rounded-lg shadow-lg text-xs font-semibold text-brand-gold">
+                                <i class="fa-solid fa-award mr-1"></i> Researcher &amp; Innovator
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-about" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <h2 class="text-3xl font-bold heading-serif text-brand-dark">About Tarjinder Tarun</h2>
+                <div class="w-20 h-1 bg-brand-gold mt-2 mb-4"></div>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Tarjinder Tarun is an Independent Researcher, Embedded Hardware Engineer, and Tech Entrepreneur specializing in optical sensing, IoT telemetry, spectral soil analysis, and building custom robotics platforms.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="emerald-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Embedded Systems &amp; IoT</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Specializing in low-power microcontroller systems, real-time wireless telemetry, spectral optical sensors, and industrial IoT communication protocols.
+                    </p>
+                </div>
+
+                <div class="emerald-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Robotics &amp; Automation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Designing modular robotic drive controllers, autonomous agricultural survey rovers, and hardware-in-the-loop embedded platforms.
+                    </p>
+                </div>
+
+                <div class="emerald-card p-6 rounded-xl">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-100 text-brand-emerald flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Patents &amp; Hardware R&amp;D</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Translating theoretical research into filed patent registrations, commercialized engineering kits, and open-source hardware frameworks.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-research" class="py-16 bg-white border-y border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                    <div>
+                        <h2 class="text-3xl font-bold heading-serif text-brand-dark">Research Hub</h2>
+                        <div class="w-20 h-1 bg-brand-gold mt-2 mb-2"></div>
+                        <p class="text-gray-600">Core scientific investigations, optical sensing platforms, and edge AI projects.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex flex-wrap gap-2" id="research-filter-container">
+                        <button onclick="filterResearch('all')" class="res-filter-btn bg-brand-dark text-white px-4 py-1.5 rounded-full text-xs font-semibold">All Domains</button>
+                        <button onclick="filterResearch('iot')" class="res-filter-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-1.5 rounded-full text-xs font-semibold">IoT &amp; Sensors</button>
+                        <button onclick="filterResearch('robotics')" class="res-filter-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-1.5 rounded-full text-xs font-semibold">Robotics</button>
+                        <button onclick="filterResearch('agtech')" class="res-filter-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-1.5 rounded-full text-xs font-semibold">Smart AgTech</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="research-grid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-publications" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold heading-serif text-brand-dark">Publications &amp; Scholarly Papers</h2>
+                    <div class="w-20 h-1 bg-brand-gold mt-2 mb-2"></div>
+                    <p class="text-gray-600">Peer-reviewed research articles with direct external publisher, DOI, and IEEE links.</p>
+                </div>
+            </div>
+
+            <div class="space-y-4" id="publications-container">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+
+        <section id="sec-patents" class="py-16 bg-gray-100 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold heading-serif text-brand-dark">Patents &amp; Intellectual Property</h2>
+                <div class="w-20 h-1 bg-brand-gold mt-2 mb-8"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="patents-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-projects" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold heading-serif text-brand-dark">Featured Projects &amp; Hardware Platforms</h2>
+            <div class="w-20 h-1 bg-brand-gold mt-2 mb-8"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="projects-container">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+
+        <section id="sec-training" class="py-16 bg-brand-dark text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-10">
+                    <h2 class="text-3xl font-bold heading-serif text-brand-gold">Training &amp; Technical Workshops</h2>
+                    <p class="text-gray-300 mt-2">Hands-on masterclasses and technical bootcamps led across academic institutions and NGO initiatives.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="workshops-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-blog" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold heading-serif text-brand-dark">Blog Posts &amp; Insights</h2>
+                    <div class="w-20 h-1 bg-brand-gold mt-2 mb-2"></div>
+                    <p class="text-gray-600">Technical walkthroughs, Hinglish AI introductions, and hardware engineering guides.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+
+        <section id="sec-news" class="py-16 bg-gray-100 border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold heading-serif text-brand-dark">News &amp; Press Highlights</h2>
+                <div class="w-20 h-1 bg-brand-gold mt-2 mb-8"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="news-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-mobotics" class="py-16 bg-white border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-r from-brand-dark to-brand-emerald rounded-2xl text-white p-8 md:p-12 shadow-xl">
+                    <div class="max-w-3xl">
+                        <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-emerald-400/30">Commercial Entity #1</span>
+                        <h2 class="text-3xl md:text-4xl font-bold heading-serif mt-4 mb-4">Mobotics — Commercial Hardware &amp; R&amp;D</h2>
+                        <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                            Mobotics is a commercial technology entity delivering institutional hardware engineering kits, industrial IoT prototyping services, custom PCB firmware, and paid college tech masterclasses.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="bg-brand-dark/60 p-4 rounded-lg border border-emerald-800">
+                                <i class="fa-solid fa-microchip text-brand-gold text-2xl mb-2"></i>
+                                <h4 class="font-bold text-sm">Robotics Kits</h4>
+                                <p class="text-xs text-gray-400 mt-1">Modular electronics &amp; robotics training platforms.</p>
+                            </div>
+                            <div class="bg-brand-dark/60 p-4 rounded-lg border border-emerald-800">
+                                <i class="fa-solid fa-industry text-brand-gold text-2xl mb-2"></i>
+                                <h4 class="font-bold text-sm">Prototyping R&amp;D</h4>
+                                <p class="text-xs text-gray-400 mt-1">Industrial IoT sensor &amp; gateway development.</p>
+                            </div>
+                            <div class="bg-brand-dark/60 p-4 rounded-lg border border-emerald-800">
+                                <i class="fa-solid fa-graduation-cap text-brand-gold text-2xl mb-2"></i>
+                                <h4 class="font-bold text-sm">Institutional Workshops</h4>
+                                <p class="text-xs text-gray-400 mt-1">Paid college bootcamps &amp; faculty development.</p>
+                            </div>
+                        </div>
+                        <button onclick="navTo('contact')" class="bg-brand-gold text-brand-dark font-bold px-6 py-3 rounded-lg hover:bg-amber-400 transition">Inquire Commercial Services</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-foundation" class="py-16 bg-amber-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl border border-amber-200 p-8 md:p-12 shadow-md">
+                    <div class="max-w-3xl">
+                        <span class="bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-amber-300">Non-Profit Section-8 Entity #2</span>
+                        <h2 class="text-3xl md:text-4xl font-bold heading-serif text-brand-dark mt-4 mb-4">Mobotics Welfare Foundation</h2>
+                        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                            Mobotics Welfare Foundation is a Section-8 non-profit organization dedicated to democratizing STEM, robotics, and AI literacy for rural and government school students at zero cost.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-amber-600 mt-1"></i>
+                                <span class="text-sm text-gray-700 font-medium">100% Free hands-on science &amp; robotics workshops for underprivileged schools.</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-amber-600 mt-1"></i>
+                                <span class="text-sm text-gray-700 font-medium">Free distribution of open-source science tinkering kits under CSR initiatives.</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-amber-600 mt-1"></i>
+                                <span class="text-sm text-gray-700 font-medium">Strict zero-commercial policy: no product sales allowed on NGO programs.</span>
+                            </div>
+                        </div>
+                        <button onclick="navTo('contact')" class="bg-brand-emerald text-white font-bold px-6 py-3 rounded-lg hover:bg-emerald-900 transition">Partner With MWF NGO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-contact" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold heading-serif text-brand-dark">Contact &amp; Collaboration</h2>
+                    <div class="w-20 h-1 bg-brand-gold mt-2 mb-6"></div>
+                    <p class="text-gray-600 mb-8">Reach out directly for research collaboration, commercial product prototyping at Mobotics, or non-profit STEM outreach programs with Mobotics Welfare Foundation.</p>
+
+                    <div class="space-y-4 text-sm text-gray-700">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-brand-emerald text-lg w-6"></i>
+                            <span>contact@tarjindertarun.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-dot text-brand-emerald text-lg w-6"></i>
+                            <span>Punjab / Delhi NCR, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm" id="sec-work-with-me">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6">Send Message / Work Request</h3>
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-600 mb-1">Your Full Name</label>
+                            <input type="text" required class="w-full border border-gray-300 p-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-600 mb-1">Email Address</label>
+                            <input type="email" required class="w-full border border-gray-300 p-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-600 mb-1">Entity / Topic</label>
+                            <select class="w-full border border-gray-300 p-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm">
+                                <option>Tarjinder Tarun (Research Collaboration)</option>
+                                <option>Mobotics (Commercial Prototyping &amp; Hardware Kits)</option>
+                                <option>Mobotics Welfare Foundation (NGO School Program)</option>
+                                <option>Guest Speaker / Keynote Workshop</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-gray-600 mb-1">Message</label>
+                            <textarea rows="4" required class="w-full border border-gray-300 p-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-emerald text-white py-3 rounded-lg font-bold hover:bg-emerald-900 transition shadow">
+                            Send Inquiry
+                        </button>
+                    </form>
+                    <div id="contact-alert" class="hidden mt-4 p-3 rounded-lg text-sm bg-emerald-100 text-emerald-800 border border-emerald-300">
+                        Thank you! Your inquiry has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white border-t border-emerald-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div>
+                    <span class="text-xl font-bold gold-gradient-text heading-serif">Tarjinder Tarun</span>
+                    <p class="text-xs text-gray-400 mt-1">Research Hub • Mobotics • Mobotics Welfare Foundation</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-xs text-gray-300">
+                    <a href="#home" onclick="navTo('home')" class="hover:text-brand-gold">Home</a>
+                    <a href="#about" onclick="navTo('about')" class="hover:text-brand-gold">About</a>
+                    <a href="#research" onclick="navTo('research')" class="hover:text-brand-gold">Research</a>
+                    <a href="#blog" onclick="navTo('blog')" class="hover:text-brand-gold">Blog</a>
+                    <a href="#mobotics" onclick="navTo('mobotics')" class="hover:text-emerald-300">Mobotics</a>
+                    <a href="#foundation" onclick="navTo('foundation')" class="hover:text-amber-300">Foundation</a>
+                </div>
+
+                <div>
+                    <button onclick="openCMSModal()" class="text-xs border border-brand-gold/50 text-brand-gold px-3.5 py-2 rounded hover:bg-brand-gold hover:text-brand-dark transition font-semibold">
+                        <i class="fa-solid fa-sliders mr-1.5"></i> Admin CMS Panel
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-emerald-900/50 text-center text-xs text-gray-500">
+                &copy; <span id="year-span"></span> Tarjinder Tarun. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div id="blog-reader-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl relative p-6 md:p-8">
+            <button onclick="closeBlogModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center text-lg z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- AdSense Dynamic Top Banner -->
+            <div id="adsense-top-banner" class="hidden mb-4 p-3 bg-amber-50 border border-amber-200 rounded text-center text-xs text-amber-800">
+                <span class="font-bold">Advertisement Banner (Google AdSense Active)</span>
+            </div>
+
+            <div id="blog-modal-content">
+                <!-- Dynamically populated -->
+            </div>
+
+            <!-- Reader Comment Section -->
+            <div class="mt-10 pt-8 border-t border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4"><i class="fa-regular fa-comments mr-2 text-brand-emerald"></i> Comments</h3>
+                
+                <div id="comments-list" class="space-y-4 mb-6">
+                    <!-- Dynamic Comments -->
+                </div>
+
+                <form id="comment-form" onsubmit="submitComment(event)" class="bg-gray-50 p-4 rounded-xl border border-gray-200 space-y-3">
+                    <h4 class="text-sm font-bold text-gray-800">Leave a Comment</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <input type="text" id="comment-author" placeholder="Your Name" required class="border border-gray-300 p-2 rounded text-xs">
+                        <input type="email" id="comment-email" placeholder="Your Email" required class="border border-gray-300 p-2 rounded text-xs">
+                    </div>
+                    <textarea id="comment-text" rows="3" placeholder="Write your comment..." required class="w-full border border-gray-300 p-2 rounded text-xs"></textarea>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold hover:bg-emerald-900">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-brand-gold text-2xl font-bold">
+                <i class="fa-solid fa-xmark"></i> Close
+            </button>
+            <img id="lightbox-img" src="" alt="Expanded View" class="max-h-[80vh] w-auto max-w-full rounded-lg shadow-2xl object-contain bg-black/40">
+            <p id="lightbox-caption" class="text-white text-sm mt-3 text-center bg-brand-dark/80 px-4 py-2 rounded-md border border-gray-700"></p>
+        </div>
+    </div>
+
+    <div id="cms-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-5xl w-full max-h-[92vh] overflow-y-auto custom-scrollbar shadow-2xl p-6 md:p-8 relative">
+            <div class="flex justify-between items-center pb-4 border-b border-gray-200">
+                <h3 class="text-2xl font-bold text-brand-dark flex items-center">
+                    <i class="fa-solid fa-sliders text-brand-gold mr-3"></i> WordPress-Style CMS Engine
+                </h3>
+                <button onclick="closeCMSModal()" class="text-gray-500 hover:text-black text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Tab Navigation Header -->
+            <div class="flex space-x-2 border-b border-gray-200 mt-4 overflow-x-auto text-xs font-bold uppercase tracking-wider custom-scrollbar">
+                <button onclick="switchCMSTab('tab-posts')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-brand-emerald text-brand-emerald">Blog &amp; News</button>
+                <button onclick="switchCMSTab('tab-research')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Research</button>
+                <button onclick="switchCMSTab('tab-patents')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Patents &amp; IP</button>
+                <button onclick="switchCMSTab('tab-publications')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Publications</button>
+                <button onclick="switchCMSTab('tab-workshops')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Workshops</button>
+                <button onclick="switchCMSTab('tab-comments')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Comments</button>
+                <button onclick="switchCMSTab('tab-social-links')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">Academic Links</button>
+                <button onclick="switchCMSTab('tab-seo-adsense')" class="cms-tab-btn py-2.5 px-3 border-b-2 border-transparent text-gray-500 hover:text-brand-emerald">SEO &amp; AdSense</button>
+            </div>
+
+            <!-- TAB 1: Blog & News Posts CRUD -->
+            <div id="tab-posts" class="cms-tab-content py-4 space-y-6">
+                <h4 class="font-bold text-lg text-gray-900">Create or Edit Blog Post</h4>
+                <form id="cms-post-form" onsubmit="handleCMSPostSubmit(event)" class="space-y-4 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700">Post Title</label>
+                        <input type="text" id="cms-title" required class="w-full border p-2 rounded text-sm mt-1">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700">Author Name</label>
+                            <input type="text" id="cms-author" value="Tarjinder Tarun" required class="w-full border p-2 rounded text-sm mt-1">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700">Estimated Reading Time</label>
+                            <input type="text" id="cms-readtime" value="5 min read" required class="w-full border p-2 rounded text-sm mt-1">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700">Main Cover Image URL</label>
+                        <input type="url" id="cms-image" placeholder="https://images.unsplash.com/..." class="w-full border p-2 rounded text-sm mt-1">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700">Image Caption</label>
+                        <input type="text" id="cms-caption" class="w-full border p-2 rounded text-sm mt-1">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700">Post Content (HTML Supported - Feel free to paste image tags)</label>
+                        <textarea id="cms-content" rows="6" required class="w-full border p-2 rounded text-sm mt-1 font-mono"></textarea>
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-6 py-2 rounded text-sm font-bold hover:bg-emerald-900">Save Post</button>
+                </form>
+
+                <div>
+                    <h5 class="font-bold text-sm text-gray-800 mb-2">Existing Blog Posts</h5>
+                    <div id="cms-posts-list" class="space-y-2"></div>
+                </div>
+            </div>
+
+            <!-- TAB 2: Research Hub CRUD -->
+            <div id="tab-research" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">Add Research Hub Item</h4>
+                <form onsubmit="handleCMSResearchSubmit(event)" class="space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold">Research Topic Title</label>
+                        <input type="text" id="cms-res-title" required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold">Category (iot / robotics / agtech)</label>
+                            <select id="cms-res-cat" class="w-full border p-2 rounded text-sm">
+                                <option value="iot">IoT &amp; Sensors</option>
+                                <option value="robotics">Robotics</option>
+                                <option value="agtech">Smart AgTech</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold">External Paper / Lab Link URL</label>
+                            <input type="url" id="cms-res-link" placeholder="https://doi.org/..." required class="w-full border p-2 rounded text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold">Description</label>
+                        <textarea id="cms-res-desc" rows="2" required class="w-full border p-2 rounded text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold">Add Research Project</button>
+                </form>
+                <div id="cms-research-list" class="space-y-2"></div>
+            </div>
+
+            <!-- TAB 3: Patents Manager CRUD -->
+            <div id="tab-patents" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">Add Patent / Innovation Record</h4>
+                <form onsubmit="handleCMSPatentSubmit(event)" class="space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold">Patent Invention Title</label>
+                        <input type="text" id="cms-pat-title" required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold">Filing / Application Number</label>
+                            <input type="text" id="cms-pat-num" required class="w-full border p-2 rounded text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold">Status (Granted / Published / Pending)</label>
+                            <input type="text" id="cms-pat-status" value="Published" required class="w-full border p-2 rounded text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold">Official Patent Registry Target URL (IP India / Google Patents / WIPO)</label>
+                        <input type="url" id="cms-pat-link" placeholder="https://ipindiaservices.gov.in/..." required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold">Add Patent Record</button>
+                </form>
+                <div id="cms-patents-list" class="space-y-2"></div>
+            </div>
+
+            <!-- TAB 4: Publications Manager CRUD -->
+            <div id="tab-publications" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">Add Scholarly Publication</h4>
+                <form onsubmit="handleCMSPubSubmit(event)" class="space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold">Paper Title</label>
+                        <input type="text" id="cms-pub-title" required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold">Journal / Conference Name</label>
+                            <input type="text" id="cms-pub-journal" required class="w-full border p-2 rounded text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold">Year</label>
+                            <input type="text" id="cms-pub-year" value="2026" required class="w-full border p-2 rounded text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold">Publisher External Target URL (IEEE / Zenodo / DOI Link)</label>
+                        <input type="url" id="cms-pub-link" placeholder="https://doi.org/10.1000/..." required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold">Add Publication Entry</button>
+                </form>
+                <div id="cms-pubs-list" class="space-y-2"></div>
+            </div>
+
+            <!-- TAB 5: Workshops Manager CRUD -->
+            <div id="tab-workshops" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">Add Technical Workshop</h4>
+                <form onsubmit="handleCMSWorkshopSubmit(event)" class="space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold">Workshop Title</label>
+                        <input type="text" id="cms-ws-title" required class="w-full border p-2 rounded text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold">Entity Type</label>
+                        <select id="cms-ws-type" class="w-full border p-2 rounded text-sm">
+                            <option value="Commercial">Commercial / Institutional (Mobotics)</option>
+                            <option value="NGO">MWF NGO Outreach (Free Program)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold">Curriculum / Details Description</label>
+                        <textarea id="cms-ws-desc" rows="2" required class="w-full border p-2 rounded text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold">Add Workshop Entry</button>
+                </form>
+                <div id="cms-workshops-list" class="space-y-2"></div>
+            </div>
+
+            <!-- TAB 6: Visitor Comments Moderation -->
+            <div id="tab-comments" class="cms-tab-content py-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900 mb-4">Moderate Visitor Comments</h4>
+                <div id="cms-comments-list" class="space-y-3">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+            <!-- TAB 7: Dynamic Academic & Social Links Manager -->
+            <div id="tab-social-links" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">Academic &amp; Social Links Manager</h4>
+                <p class="text-xs text-gray-600">Add multiple profile links. These will dynamically update the header, hero section, and JSON-LD schema sameAs graph.</p>
+
+                <form onsubmit="handleCMSAddSocialLink(event)" class="space-y-3 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold">Platform Name (e.g. Google Scholar, GitHub, ResearchGate, ORCID, LinkedIn)</label>
+                            <input type="text" id="cms-social-name" placeholder="Google Scholar" required class="w-full border p-2 rounded text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold">Target URL</label>
+                            <input type="url" id="cms-social-url" placeholder="https://scholar.google.com/..." required class="w-full border p-2 rounded text-sm">
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-brand-emerald text-white px-4 py-2 rounded text-xs font-bold">Add Social / Academic Link</button>
+                </form>
+
+                <div>
+                    <h5 class="font-bold text-sm text-gray-800 mb-2">Active Profiles</h5>
+                    <div id="cms-social-links-list" class="space-y-2"></div>
+                </div>
+            </div>
+
+            <!-- TAB 8: SEO, AdSense, GTM & AI Indexing Manager -->
+            <div id="tab-seo-adsense" class="cms-tab-content py-4 space-y-4 hidden">
+                <h4 class="font-bold text-lg text-gray-900">SEO, GTM, GEO/AI Indexing &amp; Google AdSense Injector</h4>
+                
+                <form onsubmit="handleCMSSEOAdSenseSubmit(event)" class="space-y-4 bg-gray-50 p-4 rounded-xl border border-gray-200">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-700">Google AdSense Publisher Client ID (`ca-pub-XXXXXXXXXXXX`)</label>
+                        <input type="text" id="cms-adsense-id" placeholder="ca-pub-1234567890123456" class="w-full border p-2 rounded text-sm font-mono mt-1">
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" id="cms-adsense-toggle" class="rounded text-brand-emerald">
+                        <label for="cms-adsense-toggle" class="text-xs font-semibold text-gray-800">Enable AdSense Banners inside Blog Post Reader</label>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-3">
+                        <label class="block text-xs font-semibold text-gray-700">Google Tag Manager (GTM) Container ID (`GTM-XXXXXX`)</label>
+                        <input type="text" id="cms-gtm-id" placeholder="GTM-N123456" class="w-full border p-2 rounded text-sm font-mono mt-1">
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-3">
+                        <label class="block text-xs font-semibold text-gray-700">AI Search Platforms &amp; GEO Indexing Keywords (ChatGPT / Perplexity / Gemini)</label>
+                        <textarea id="cms-seo-keywords" rows="3" class="w-full border p-2 rounded text-sm mt-1"></textarea>
+                    </div>
+
+                    <button type="submit" class="bg-brand-emerald text-white px-6 py-2 rounded text-sm font-bold hover:bg-emerald-900">Save SEO &amp; AdSense Settings</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DEFAULT INITIAL DATABASE SETUP
+        const DEFAULT_POSTS = [
+            {
+                id: 'post-101',
+                title: 'Artificial Intelligence (AI): Ek Nayi Subah ki Shuruaat',
+                author: 'Tarjinder Tarun',
+                date: 'October 2026',
+                readTime: '4 min read',
+                imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80',
+                caption: 'Artificial Intelligence aur Future Technology ka ek visual representation',
+                content: `<div class="ai-intro-post space-y-4">
+                    <p class="text-base text-gray-700 leading-relaxed font-sans">Artificial Intelligence (AI) aaj ke daur mein sirf ek sci-fi word nahi, balki humari rozmarra ki zindagi ka ek aham hissa ban chuki hai. Simple shabdon mein kahein, toh AI computers aur machines ko insano ki tarah sochne, sikhne aur decisions lene ki kshamta deta hai.</p>
+                    
+                    <div class="post-image text-center my-6">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence Concept" class="max-w-full h-auto rounded-lg mx-auto shadow-md border border-gray-200 cursor-pointer hover:opacity-95" onclick="openLightbox(this.src, 'Artificial Intelligence Concept Visual')">
+                        <p class="text-xs text-gray-500 mt-2">Artificial Intelligence aur Future Technology ka ek visual representation</p>
+                    </div>
+
+                    <p class="text-base text-gray-700 leading-relaxed font-sans">Smartphone voice assistants se lekar complex medical diagnoses aur autonomous vehicles tak, AI har field mein tezi se badlav la raha hai. Yeh technology na sirf hamare kaam karne ke tarike ko asan bana rahi hai, balki bhavishya ki nayi seemayein bhi tay kar rahi hai.</p>
+                </div>`
+            },
+            {
+                id: 'post-102',
+                title: 'Building Resilient Optical Sensor Nodes for IoT Precision Agriculture',
+                author: 'Tarjinder Tarun',
+                date: 'September 2026',
+                readTime: '6 min read',
+                imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+                caption: 'Optical Sensing & Hardware Telemetry Node',
+                content: `<p class="text-base text-gray-700 leading-relaxed">Designing optical soil sensing hardware requires stable light emitters, low-noise spectral photodiode amplifiers, and robust micro-controllers capable of edge calibration in harsh agricultural fields.</p>`
+            }
+        ];
+
+        const DEFAULT_RESEARCH = [
+            { id: 'res-1', cat: 'agtech', title: 'Spectral Soil Nutrient & Nitrogen Optical Analysis', desc: 'Non-destructive real-time soil nitrogen evaluation using multi-wavelength LED reflection arrays.', link: 'https://doi.org/10.1000/182' },
+            { id: 'res-2', cat: 'iot', title: 'Low-Power Edge IoT Mesh Telemetry Gateways', desc: 'Long-range battery efficient micro-mesh telemetry protocol for real-time field deployments.', link: 'https://zenodo.org' },
+            { id: 'res-3', cat: 'robotics', title: 'Modular Actuator Controllers for DIY Survey Rovers', desc: 'Modular motor control electronics with hardware-level thermal shutdown safeguards.', link: 'https://researchgate.net' }
+        ];
+
+        const DEFAULT_PATENTS = [
+            { id: 'pat-1', num: 'PAT-IN-2025-0981', title: 'Spectral Optical Soil Nutrient & Nitrogen Analyzer Device', status: 'Published', link: 'https://ipindiaservices.gov.in' },
+            { id: 'pat-2', num: 'PAT-IN-2024-0412', title: 'Smart Modular Actuator Driver with Integrated Safety Circuitry', status: 'Granted', link: 'https://patents.google.com' }
+        ];
+
+        const DEFAULT_PUBLICATIONS = [
+            { id: 'pub-1', title: 'Optical Reflection Array Architecture for Real-Time Soil Nitrogen Estimation', journal: 'Journal of Agricultural Electronics & Sensing', year: '2025', link: 'https://doi.org/10.1000/182' },
+            { id: 'pub-2', title: 'Low-Latency Micro-Mesh Networks in Constrained Agricultural IoT Systems', journal: 'IEEE International Conference on Embedded Systems', year: '2024', link: 'https://zenodo.org' }
+        ];
+
+        const DEFAULT_WORKSHOPS = [
+            { id: 'ws-1', title: 'Advanced Microcontroller & Embedded C Masterclass', type: 'Commercial', desc: '30-hour intensive institutional bootcamp for engineering colleges covering ESP32, STM32, and freeRTOS.' },
+            { id: 'ws-2', title: 'Free STEM & Science Tinkering Workshop for Schools', type: 'NGO', desc: '100% free hands-on outreach program conducted by Mobotics Welfare Foundation in rural schools.' }
+        ];
+
+        const DEFAULT_SOCIAL_LINKS = [
+            { name: 'Google Scholar', url: 'https://scholar.google.com' },
+            { name: 'GitHub', url: 'https://github.com' },
+            { name: 'ResearchGate', url: 'https://researchgate.net' },
+            { name: 'ORCID', url: 'https://orcid.org' }
+        ];
+
+        const PROJECTS = [
+            { name: 'Mobotics Pro-Kit v2', cat: 'Mobotics Commercial', desc: 'Modular robotics hardware kit designed for university engineering labs.' },
+            { name: 'MWF Open STEM Tinkering Kit', cat: 'Mobotics Welfare Foundation', desc: 'Free distribution non-profit kit empowering school kids in robotics.' },
+            { name: 'Spectral Soil Reflection Probe', cat: 'Research Prototype', desc: 'Optical sensor probe for non-destructive agricultural nutrient monitoring.' }
+        ];
+
+        // Persistent Local Data Memory
+        let appPosts = JSON.parse(localStorage.getItem('tt_posts')) || DEFAULT_POSTS;
+        let appResearch = JSON.parse(localStorage.getItem('tt_research')) || DEFAULT_RESEARCH;
+        let appPatents = JSON.parse(localStorage.getItem('tt_patents')) || DEFAULT_PATENTS;
+        let appPubs = JSON.parse(localStorage.getItem('tt_pubs')) || DEFAULT_PUBLICATIONS;
+        let appWorkshops = JSON.parse(localStorage.getItem('tt_workshops')) || DEFAULT_WORKSHOPS;
+        let appSocialLinks = JSON.parse(localStorage.getItem('tt_social_links')) || DEFAULT_SOCIAL_LINKS;
+        let appComments = JSON.parse(localStorage.getItem('tt_comments')) || [
+            { postId: 'post-101', author: 'Rahul Sharma', text: 'Bhut hi accha article hai sir! AI ke baare mein simple Hinglish mein samjhaya.', status: 'approved', date: 'Oct 2026' }
+        ];
+
+        // Settings persistent state
+        let appSEO = JSON.parse(localStorage.getItem('tt_seo_settings')) || {
+            adsenseId: '',
+            adsenseEnabled: false,
+            gtmId: '',
+            keywords: 'Tarjinder Tarun, Robotics Researcher, Embedded Systems, Optical Sensing, Smart Agriculture, Mobotics, Mobotics Welfare Foundation'
+        };
+
+        let currentPostId = null;
+
+        // On Page Load Startup Function
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year-span').innerText = new Date().getFullYear();
+            renderSocialLinks();
+            renderBlogGrid();
+            renderResearchGrid();
+            renderPublications();
+            renderPatents();
+            renderWorkshops();
+            renderProjects();
+            applySEOSettings();
+            injectSchema();
+
+            // Mobile menu drawer toggle
+            document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        });
+
+        function handleImageError(imgEl, title) {
+            imgEl.onerror = null;
+            const svgPlaceholder = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect width="800" height="400" fill="%23113f30"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23d4af37" font-family="sans-serif" font-size="22" font-weight="bold">${encodeURIComponent(title || 'Tarjinder Tarun Research')}</text></svg>`;
+            imgEl.src = svgPlaceholder;
+        }
+
+        // Navigation Controller
+        function navTo(secId) {
+            const el = document.getElementById('sec-' + secId);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
+        }
+
+        function renderBlogGrid() {
+            const container = document.getElementById('blog-grid');
+            container.innerHTML = appPosts.map(post => `
+                <div class="emerald-card rounded-2xl overflow-hidden flex flex-col">
+                    <div class="relative h-48 bg-brand-dark overflow-hidden group cursor-pointer" onclick="openLightbox('${post.imageUrl}', '${post.title}')">
+                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="handleImageError(this, '${post.title}')">
+                        <div class="absolute top-3 right-3 bg-brand-dark/80 backdrop-blur-md text-brand-gold text-xs px-2.5 py-1 rounded border border-brand-gold/30">
+                            <i class="fa-solid fa-expand mr-1"></i> Zoom Image
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between space-y-4">
+                        <div>
+                            <div class="text-xs text-brand-emerald font-semibold mb-2">${post.date} • ${post.readTime}</div>
+                            <h3 class="text-xl font-bold text-gray-900 hover:text-brand-emerald cursor-pointer leading-snug" onclick="openBlogModal('${post.id}')">${post.title}</h3>
+                            <p class="text-gray-600 text-sm mt-2 line-clamp-3">${post.caption || 'Click to read full post content...'}</p>
+                        </div>
+                        <button onclick="openBlogModal('${post.id}')" class="text-brand-emerald text-sm font-bold inline-flex items-center space-x-1 hover:text-emerald-900 pt-2 border-t border-gray-100">
+                            <span>Read Article</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openBlogModal(postId) {
+            currentPostId = postId;
+            const post = appPosts.find(p => p.id === postId);
+            if (!post) return;
+
+            // Toggle AdSense banner display inside reader
+            const adBanner = document.getElementById('adsense-top-banner');
+            if (appSEO.adsenseEnabled && appSEO.adsenseId) {
+                adBanner.classList.remove('hidden');
+                adBanner.innerHTML = `<span class="font-bold">Google AdSense Banner (${appSEO.adsenseId}) Active</span>`;
+            } else {
+                adBanner.classList.add('hidden');
+            }
+
+            const modalContent = document.getElementById('blog-modal-content');
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-xs font-bold text-brand-emerald uppercase tracking-wider">${post.date} • ${post.readTime} • By ${post.author}</span>
+                    <h2 class="text-2xl md:text-3xl font-bold heading-serif text-brand-dark">${post.title}</h2>
+                    
+                    ${post.imageUrl ? `
+                    <div class="my-4 text-center cursor-pointer group" onclick="openLightbox('${post.imageUrl}', '${post.caption || post.title}')">
+                        <div class="relative inline-block overflow-hidden rounded-xl border border-gray-200">
+                            <img src="${post.imageUrl}" alt="${post.title}" class="max-w-full max-h-96 object-cover rounded-xl" onerror="handleImageError(this, '${post.title}')">
+                            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold text-xs">
+                                <i class="fa-solid fa-magnifying-glass-plus text-xl mr-2"></i> Click to Zoom Image
+                            </div>
+                        </div>
+                        ${post.caption ? `<p class="text-xs text-gray-500 mt-2 italic">${post.caption}</p>` : ''}
+                    </div>
+                    ` : ''}
+
+                    <div class="prose max-w-none text-gray-800">${post.content}</div>
+                </div>
+            `;
+
+            renderComments(postId);
+            document.getElementById('blog-reader-modal').classList.remove('hidden');
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blog-reader-modal').classList.add('hidden');
+        }
+
+        // Lightbox Functions
+        function openLightbox(url, caption) {
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = url;
+            cap.innerText = caption || 'Image View';
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+        }
+
+        function renderComments(postId) {
+            const list = document.getElementById('comments-list');
+            const filtered = appComments.filter(c => c.postId === postId && c.status === 'approved');
+            if (filtered.length === 0) {
+                list.innerHTML = `<p class="text-xs text-gray-500 italic">No approved comments yet. Be the first to comment!</p>`;
+                return;
+            }
+            list.innerHTML = filtered.map(c => `
+                <div class="bg-gray-50 p-3.5 rounded-lg border border-gray-200 text-xs space-y-1">
+                    <div class="font-bold text-gray-900">${c.author} <span class="font-normal text-gray-400">(${c.date})</span></div>
+                    <p class="text-gray-700 leading-relaxed">${c.text}</p>
+                </div>
+            `).join('');
+        }
+
+        function submitComment(e) {
+            e.preventDefault();
+            const author = document.getElementById('comment-author').value;
+            const text = document.getElementById('comment-text').value;
+            appComments.push({
+                postId: currentPostId,
+                author,
+                text,
+                status: 'pending',
+                date: 'Just now'
+            });
+            localStorage.setItem('tt_comments', JSON.stringify(appComments));
+            alert('Comment submitted for approval!');
+            document.getElementById('comment-form').reset();
+        }
+
+        function renderSocialLinks() {
+            const heroContainer = document.getElementById('dynamic-social-links-hero');
+            heroContainer.innerHTML = appSocialLinks.map(l => {
+                let iconClass = 'fa-solid fa-link';
+                const lower = l.name.toLowerCase();
+                if (lower.includes('scholar')) iconClass = 'fa-solid fa-graduation-cap';
+                else if (lower.includes('github')) iconClass = 'fa-brands fa-github';
+                else if (lower.includes('researchgate')) iconClass = 'fa-brands fa-researchgate';
+                else if (lower.includes('orcid')) iconClass = 'fa-solid fa-id-badge';
+                else if (lower.includes('linkedin')) iconClass = 'fa-brands fa-linkedin';
+                else if (lower.includes('youtube')) iconClass = 'fa-brands fa-youtube';
+
+                return `<a href="${l.url}" target="_blank" class="hover:text-brand-gold flex items-center space-x-1.5 transition"><i class="${iconClass}"></i> <span>${l.name}</span></a>`;
+            }).join('');
+        }
+
+        function renderResearchGrid(filter = 'all') {
+            const grid = document.getElementById('research-grid');
+            const items = filter === 'all' ? appResearch : appResearch.filter(r => r.cat === filter);
+            grid.innerHTML = items.map(r => `
+                <div class="emerald-card p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs uppercase font-bold text-brand-gold mb-2">${r.cat}</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">${r.title}</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">${r.desc}</p>
+                    </div>
+                    <a href="${r.link}" target="_blank" class="text-xs font-bold text-brand-emerald hover:text-emerald-900 inline-flex items-center space-x-1 pt-3 border-t border-gray-100">
+                        <span>Open Publisher DOI / Paper</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function filterResearch(cat) { renderResearchGrid(cat); }
+
+        function renderPublications() {
+            document.getElementById('publications-container').innerHTML = appPubs.map(p => `
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex flex-col md:flex-row justify-between md:items-center">
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-base">${p.title}</h4>
+                        <p class="text-xs text-gray-500 mt-1">${p.journal} • <span class="font-semibold text-brand-dark">${p.year}</span></p>
+                    </div>
+                    <a href="${p.link}" target="_blank" class="mt-2 md:mt-0 text-xs bg-brand-dark text-brand-gold px-3.5 py-2 rounded font-bold hover:bg-black transition inline-flex items-center space-x-1.5">
+                        <span>Open Publisher Article</span>
+                        <i class="fa-solid fa-external-link text-[10px]"></i>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function renderPatents() {
+            document.getElementById('patents-container').innerHTML = appPatents.map(p => `
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs bg-emerald-100 text-brand-emerald px-2 py-0.5 rounded font-bold">${p.status}</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-2">${p.title}</h4>
+                        <p class="text-xs text-gray-500 font-mono mt-1">${p.num}</p>
+                    </div>
+                    <a href="${p.link}" target="_blank" class="mt-4 text-xs font-bold text-brand-emerald hover:text-emerald-900 inline-flex items-center space-x-1">
+                        <span>Official Patent Registry Link</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        function renderWorkshops() {
+            document.getElementById('workshops-container').innerHTML = appWorkshops.map(w => `
+                <div class="bg-brand-emerald/40 border border-emerald-600/40 p-6 rounded-xl">
+                    <span class="text-xs bg-brand-gold text-brand-dark px-2.5 py-1 rounded font-bold uppercase tracking-wider">${w.type}</span>
+                    <h3 class="text-xl font-bold text-white mt-3 mb-2">${w.title}</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">${w.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function renderProjects() {
+            document.getElementById('projects-container').innerHTML = PROJECTS.map(p => `
+                <div class="emerald-card p-6 rounded-xl">
+                    <span class="text-xs font-semibold text-brand-gold uppercase">${p.cat}</span>
+                    <h3 class="text-lg font-bold text-gray-900 mt-1 mb-2">${p.name}</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">${p.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function openCMSModal() {
+            renderCMSPostsList();
+            renderCMSResearchList();
+            renderCMSPatentsList();
+            renderCMSPubsList();
+            renderCMSWorkshopsList();
+            renderCMSCommentsList();
+            renderCMSSocialLinksList();
+            populateSEOForm();
+            document.getElementById('cms-modal').classList.remove('hidden');
+        }
+
+        function closeCMSModal() {
+            document.getElementById('cms-modal').classList.add('hidden');
+        }
+
+        function switchCMSTab(tabId) {
+            document.querySelectorAll('.cms-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+        // Post CRUD
+        function handleCMSPostSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('cms-title').value;
+            const author = document.getElementById('cms-author').value;
+            const readTime = document.getElementById('cms-readtime').value;
+            const imageUrl = document.getElementById('cms-image').value;
+            const caption = document.getElementById('cms-caption').value;
+            const content = document.getElementById('cms-content').value;
+
+            appPosts.unshift({
+                id: 'post-' + Date.now(),
+                title, author, date: 'October 2026', readTime, imageUrl, caption, content
+            });
+            localStorage.setItem('tt_posts', JSON.stringify(appPosts));
+            renderBlogGrid();
+            renderCMSPostsList();
+            e.target.reset();
+            alert('Blog Post saved!');
+        }
+
+        function renderCMSPostsList() {
+            document.getElementById('cms-posts-list').innerHTML = appPosts.map((p, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2.5 rounded text-xs">
+                    <span class="font-bold truncate max-w-xs">${p.title}</span>
+                    <button onclick="deletePost(${i})" class="text-red-600 font-bold hover:underline">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deletePost(i) {
+            appPosts.splice(i, 1);
+            localStorage.setItem('tt_posts', JSON.stringify(appPosts));
+            renderBlogGrid();
+            renderCMSPostsList();
+        }
+
+        // Research CRUD
+        function handleCMSResearchSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('cms-res-title').value;
+            const cat = document.getElementById('cms-res-cat').value;
+            const link = document.getElementById('cms-res-link').value;
+            const desc = document.getElementById('cms-res-desc').value;
+
+            appResearch.unshift({ id: 'res-' + Date.now(), title, cat, link, desc });
+            localStorage.setItem('tt_research', JSON.stringify(appResearch));
+            renderResearchGrid();
+            renderCMSResearchList();
+            e.target.reset();
+        }
+
+        function renderCMSResearchList() {
+            document.getElementById('cms-research-list').innerHTML = appResearch.map((r, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2 rounded text-xs">
+                    <span>${r.title}</span>
+                    <button onclick="deleteResearch(${i})" class="text-red-600 font-bold">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deleteResearch(i) {
+            appResearch.splice(i, 1);
+            localStorage.setItem('tt_research', JSON.stringify(appResearch));
+            renderResearchGrid();
+            renderCMSResearchList();
+        }
+
+        // Patents CRUD
+        function handleCMSPatentSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('cms-pat-title').value;
+            const num = document.getElementById('cms-pat-num').value;
+            const status = document.getElementById('cms-pat-status').value;
+            const link = document.getElementById('cms-pat-link').value;
+
+            appPatents.unshift({ id: 'pat-' + Date.now(), title, num, status, link });
+            localStorage.setItem('tt_patents', JSON.stringify(appPatents));
+            renderPatents();
+            renderCMSPatentsList();
+            e.target.reset();
+        }
+
+        function renderCMSPatentsList() {
+            document.getElementById('cms-patents-list').innerHTML = appPatents.map((p, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2 rounded text-xs">
+                    <span>${p.title} (${p.num})</span>
+                    <button onclick="deletePatent(${i})" class="text-red-600 font-bold">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deletePatent(i) {
+            appPatents.splice(i, 1);
+            localStorage.setItem('tt_patents', JSON.stringify(appPatents));
+            renderPatents();
+            renderCMSPatentsList();
+        }
+
+        // Publications CRUD
+        function handleCMSPubSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('cms-pub-title').value;
+            const journal = document.getElementById('cms-pub-journal').value;
+            const year = document.getElementById('cms-pub-year').value;
+            const link = document.getElementById('cms-pub-link').value;
+
+            appPubs.unshift({ id: 'pub-' + Date.now(), title, journal, year, link });
+            localStorage.setItem('tt_pubs', JSON.stringify(appPubs));
+            renderPublications();
+            renderCMSPubsList();
+            e.target.reset();
+        }
+
+        function renderCMSPubsList() {
+            document.getElementById('cms-pubs-list').innerHTML = appPubs.map((p, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2 rounded text-xs">
+                    <span>${p.title} (${p.year})</span>
+                    <button onclick="deletePub(${i})" class="text-red-600 font-bold">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deletePub(i) {
+            appPubs.splice(i, 1);
+            localStorage.setItem('tt_pubs', JSON.stringify(appPubs));
+            renderPublications();
+            renderCMSPubsList();
+        }
+
+        // Workshop CRUD
+        function handleCMSWorkshopSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('cms-ws-title').value;
+            const type = document.getElementById('cms-ws-type').value;
+            const desc = document.getElementById('cms-ws-desc').value;
+
+            appWorkshops.unshift({ id: 'ws-' + Date.now(), title, type, desc });
+            localStorage.setItem('tt_workshops', JSON.stringify(appWorkshops));
+            renderWorkshops();
+            renderCMSWorkshopsList();
+            e.target.reset();
+        }
+
+        function renderCMSWorkshopsList() {
+            document.getElementById('cms-workshops-list').innerHTML = appWorkshops.map((w, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2 rounded text-xs">
+                    <span>${w.title} [${w.type}]</span>
+                    <button onclick="deleteWorkshop(${i})" class="text-red-600 font-bold">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deleteWorkshop(i) {
+            appWorkshops.splice(i, 1);
+            localStorage.setItem('tt_workshops', JSON.stringify(appWorkshops));
+            renderWorkshops();
+            renderCMSWorkshopsList();
+        }
+
+        // Dynamic Social Links Manager
+        function handleCMSAddSocialLink(e) {
+            e.preventDefault();
+            const name = document.getElementById('cms-social-name').value;
+            const url = document.getElementById('cms-social-url').value;
+
+            appSocialLinks.push({ name, url });
+            localStorage.setItem('tt_social_links', JSON.stringify(appSocialLinks));
+            renderSocialLinks();
+            renderCMSSocialLinksList();
+            e.target.reset();
+        }
+
+        function renderCMSSocialLinksList() {
+            document.getElementById('cms-social-links-list').innerHTML = appSocialLinks.map((l, i) => `
+                <div class="flex justify-between items-center bg-gray-100 p-2 rounded text-xs">
+                    <span>${l.name}: ${l.url}</span>
+                    <button onclick="deleteSocialLink(${i})" class="text-red-600 font-bold">Delete</button>
+                </div>
+            `).join('');
+        }
+
+        function deleteSocialLink(i) {
+            appSocialLinks.splice(i, 1);
+            localStorage.setItem('tt_social_links', JSON.stringify(appSocialLinks));
+            renderSocialLinks();
+            renderCMSSocialLinksList();
+        }
+
+        // Comment Moderation
+        function renderCMSCommentsList() {
+            const list = document.getElementById('cms-comments-list');
+            if (appComments.length === 0) {
+                list.innerHTML = `<p class="text-xs text-gray-500">No comments to display.</p>`;
+                return;
+            }
+            list.innerHTML = appComments.map((c, idx) => `
+                <div class="p-3 bg-gray-50 rounded border border-gray-200 text-xs flex justify-between items-center">
+                    <div>
+                        <span class="font-bold text-gray-800">${c.author}:</span>
+                        <p class="text-gray-600">${c.text}</p>
+                        <span class="text-[10px] text-gray-400">Status: ${c.status}</span>
+                    </div>
+                    <div class="space-x-2">
+                        ${c.status === 'pending' ? `<button onclick="approveComment(${idx})" class="bg-emerald-600 text-white px-2 py-1 rounded text-[10px]">Approve</button>` : ''}
+                        <button onclick="deleteComment(${idx})" class="bg-red-600 text-white px-2 py-1 rounded text-[10px]">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function approveComment(idx) {
+            appComments[idx].status = 'approved';
+            localStorage.setItem('tt_comments', JSON.stringify(appComments));
+            renderCMSCommentsList();
+        }
+
+        function deleteComment(idx) {
+            appComments.splice(idx, 1);
+            localStorage.setItem('tt_comments', JSON.stringify(appComments));
+            renderCMSCommentsList();
+        }
+
+        // SEO, GTM & AdSense Injector Handlers
+        function populateSEOForm() {
+            document.getElementById('cms-adsense-id').value = appSEO.adsenseId || '';
+            document.getElementById('cms-adsense-toggle').checked = !!appSEO.adsenseEnabled;
+            document.getElementById('cms-gtm-id').value = appSEO.gtmId || '';
+            document.getElementById('cms-seo-keywords').value = appSEO.keywords || '';
+        }
+
+        function handleCMSSEOAdSenseSubmit(e) {
+            e.preventDefault();
+            appSEO.adsenseId = document.getElementById('cms-adsense-id').value.trim();
+            appSEO.adsenseEnabled = document.getElementById('cms-adsense-toggle').checked;
+            appSEO.gtmId = document.getElementById('cms-gtm-id').value.trim();
+            appSEO.keywords = document.getElementById('cms-seo-keywords').value.trim();
+
+            localStorage.setItem('tt_seo_settings', JSON.stringify(appSEO));
+            applySEOSettings();
+            alert('SEO, GTM, and AdSense settings updated successfully!');
+        }
+
+        function applySEOSettings() {
+            // Apply Keywords
+            if (appSEO.keywords) {
+                document.getElementById('meta-keywords').setAttribute('content', appSEO.keywords);
+            }
+
+            // Inject GTM if present
+            if (appSEO.gtmId) {
+                const gtmContainer = document.getElementById('gtm-script-container');
+                gtmContainer.innerHTML = `<!-- GTM Script Injected: ${appSEO.gtmId} -->`;
+            }
+
+            // Inject AdSense script if ID present
+            if (appSEO.adsenseId) {
+                const adsContainer = document.getElementById('adsense-script-container');
+                adsContainer.innerHTML = `<!-- AdSense Script Injected: ${appSEO.adsenseId} -->`;
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contact-alert').classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+        }
+
+        function injectSchema() {
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "name": "Tarjinder Tarun",
+                        "jobTitle": "Independent Researcher & Hardware Engineer",
+                        "knowsAbout": ["Embedded Systems", "IoT", "Robotics", "Optical Sensing", "Smart AgTech"],
+                        "sameAs": appSocialLinks.map(l => l.url)
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "Mobotics",
+                        "description": "Commercial robotics technology and industrial prototyping business."
+                    },
+                    {
+                        "@type": "NonProfitSB",
+                        "name": "Mobotics Welfare Foundation",
+                        "description": "Section-8 non-profit NGO providing free STEM and robotics education."
+                    }
+                ]
+            };
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(schemaData);
+            document.head.appendChild(script);
+        }
+    </script>
+</body>
+</html>
